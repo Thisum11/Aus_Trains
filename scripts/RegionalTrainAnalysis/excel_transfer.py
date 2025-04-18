@@ -4,3 +4,6 @@ df = pd.read_excel("C:\Academic\Aus_Trains\data\Processed_Data\RailwayInfo.xlsx"
 
 print(df.head())
 #Making sure the file is successfully imported.
+
+print(df.info())
+#For the assurance of the structure
