@@ -8,3 +8,5 @@ print(df.head())
 print(df.info())
 #For the assurance of the structure
 
+print(df.duplicated(subset=['Latitude', 'Longitude']).sum())
+# To check if there's any station mentioned twice in the data set
