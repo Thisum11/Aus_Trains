@@ -7,3 +7,4 @@ print(df.head())
 
 print(df.info())
 #For the assurance of the structure
+
