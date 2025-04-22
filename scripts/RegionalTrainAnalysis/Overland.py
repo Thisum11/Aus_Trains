@@ -7,7 +7,7 @@ def add_overland_line(m, stations_df, excel_path):
     route_coords=[]
 
     for station in df['Station_name']:
-        match = stations_df[stations_df['Station_name'].str.contains(station, case=False, na=False)]
+        match = stations_df[stations_df['Station_name'].str.contains(station)]
         if not match.empty:
             lat = match.iloc[0]['Latitude']
             lon = match.iloc[0]['Longitude']

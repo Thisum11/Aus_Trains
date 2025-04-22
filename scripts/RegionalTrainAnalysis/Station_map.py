@@ -1,6 +1,9 @@
 import pandas as pd
 import folium
 from Overland import add_overland_line
+from SpiritOfQLD import add_spirit_line
+
+
 
 excel_path = r"C:\Academic\Aus_Trains\data\Processed_Data\RailwayInfo.xlsx"
 stations_df = pd.read_excel(excel_path, sheet_name='Stations')
@@ -17,5 +20,7 @@ for index, row in stations_df.iterrows():
     ).add_to(m)
 # Creation of the markers in the given railway station locations
 add_overland_line(m, stations_df, excel_path)
+add_spirit_line(m, stations_df, excel_path)
+
 
 m.save("Australian_Railway_Stations.html")
